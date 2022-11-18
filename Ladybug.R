@@ -54,3 +54,5 @@ df_ladybug$Species <- str_replace(df_ladybug$Species, "Hippodamia covergence", "
 df_ladybug$Species <- str_replace(df_ladybug$Species, "hippodamia convergens", "Hippodamia convergens")
 df_ladybug$Species <- str_replace(df_ladybug$Species, "Coccinella septempunctata", "Coccinella Septempunctata")
 df_ladybug$Species <- str_replace(df_ladybug$Species, "Coccinella semtempuncata", "Coccinella Septempunctata")
+
+sally
