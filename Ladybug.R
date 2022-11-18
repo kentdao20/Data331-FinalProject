@@ -55,4 +55,11 @@ df_ladybug$Species <- str_replace(df_ladybug$Species, "hippodamia convergens", "
 df_ladybug$Species <- str_replace(df_ladybug$Species, "Coccinella septempunctata", "Coccinella Septempunctata")
 df_ladybug$Species <- str_replace(df_ladybug$Species, "Coccinella semtempuncata", "Coccinella Septempunctata")
 
-sally
+df_collector_amount <- df_ladybug %>%
+  select(collector) %>%
+  count(collector) %>%
+  drop_na()%>%
+  rename(Amount = n)%>%
+  rename(Collector = collector)
+
+
