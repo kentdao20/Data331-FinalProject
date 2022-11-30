@@ -9,7 +9,7 @@ setwd("D:/DATA 331/Final Project")
 df_scan_ladybug <- read.csv("Scan Ladybug Data.csv")
 df_ladybug <- read_excel("Ladybug Data.xlsx", sheet = 1) 
 
-unique(df_ladybug$collector)
+#cleaned data
 df_ladybug$collector <- str_replace(df_ladybug$collector, "J Hughes", "J. Hughes")
 df_ladybug$collector <- str_replace(df_ladybug$collector, "Jack Hughes", "J. Hughes")
 df_ladybug$collector <- str_replace(df_ladybug$collector, "j. Hughes", "J. Hughes")
@@ -37,7 +37,6 @@ df_ladybug$collector <- str_replace(df_ladybug$collector, "V. cervantes", "V. ce
 df_ladybug$collector <- str_replace(df_ladybug$collector, "V.Cervantes", "V. cervantes")
 df_ladybug$collector <- str_replace(df_ladybug$collector, "v cervantes", "V. cervantes")
 
-unique(df_ladybug$Species)
 df_ladybug$Species <- str_replace(df_ladybug$Species, "Propylea quatuordecimpuncata", "Propylea quatuordecimpunctata")
 df_ladybug$Species <- str_replace(df_ladybug$Species, "Harmonia axyrisis", "Harmonia axyridis")
 df_ladybug$Species <- str_replace(df_ladybug$Species, "harmonia axyridis", "Harmonia axyridis")
@@ -55,11 +54,23 @@ df_ladybug$Species <- str_replace(df_ladybug$Species, "hippodamia convergens", "
 df_ladybug$Species <- str_replace(df_ladybug$Species, "Coccinella septempunctata", "Coccinella Septempunctata")
 df_ladybug$Species <- str_replace(df_ladybug$Species, "Coccinella semtempuncata", "Coccinella Septempunctata")
 
+#collector count
 df_collector_amount <- df_ladybug %>%
   select(collector) %>%
   count(collector) %>%
-  drop_na()%>%
+  drop_na() %>%
   rename(Amount = n)%>%
   rename(Collector = collector)
 
+#collector plot for each
+ggplot(data = df_collector_amount, aes(x = Amount, y= Collector, fill= Collector)) +
+  geom_bar(stat="Identity")+
+  xlab("Count") +
+  ggtitle("Count by Collector")
+
+#species count
+df_species_count <- df_ladybug %>%
+  select(Species) %>%
+  count(Species) %>%
+  rename(Amount = n)
 
