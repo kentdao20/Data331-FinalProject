@@ -10,6 +10,18 @@ df_scan_ladybug <- read.csv("Scan Ladybug Data.csv")
 df_ladybug <- read_excel("Ladybug Data.xlsx", sheet = 1) 
 
 #cleaned data
+df_ladybug$collector <- str_replace(df_ladybug$collector, "m gorsegner", "M. Gorsegner")
+df_ladybug$collector <- str_replace(df_ladybug$collector, "m. gorsegner", "M. Gorsegner")
+df_ladybug$collector <- str_replace(df_ladybug$collector, "M.Gorsegner", "M. Gorsegner")
+df_ladybug$collector <- str_replace(df_ladybug$collector, "Marissa Gorsegner", "M. Gorsegner")
+df_ladybug$collector <- str_replace(df_ladybug$collector, "M. gorsegner", "M. Gorsegner")
+df_ladybug$collector <- str_replace(df_ladybug$collector, "v. cervantes", "V. cervantes")
+df_ladybug$collector <- str_replace(df_ladybug$collector, "Veronica Cervatnes", "V. cervantes")
+df_ladybug$collector <- str_replace(df_ladybug$collector, "Veronica Cervantes", "V. cervantes")
+df_ladybug$collector <- str_replace(df_ladybug$collector, "V. Cervantes", "V. cervantes")
+df_ladybug$collector <- str_replace(df_ladybug$collector, "V. cervantes", "V. cervantes")
+df_ladybug$collector <- str_replace(df_ladybug$collector, "V.Cervantes", "V. cervantes")
+df_ladybug$collector <- str_replace(df_ladybug$collector, "v cervantes", "V. cervantes")
 df_ladybug$collector <- str_replace(df_ladybug$collector, "J Hughes", "J. Hughes")
 df_ladybug$collector <- str_replace(df_ladybug$collector, "Jack Hughes", "J. Hughes")
 df_ladybug$collector <- str_replace(df_ladybug$collector, "j. Hughes", "J. Hughes")
@@ -24,29 +36,17 @@ df_ladybug$collector <- str_replace(df_ladybug$collector, "Olivia ruffatto", "O.
 df_ladybug$collector <- str_replace(df_ladybug$collector, "o. ruffattto", "O. Ruffatto")
 df_ladybug$collector <- str_replace(df_ladybug$collector, "o. ruffatto", "O. Ruffatto")
 df_ladybug$collector <- str_replace(df_ladybug$collector, "OliviaRuffatto", "O. Ruffatto")
-df_ladybug$collector <- str_replace(df_ladybug$collector, "m gorsegner", "M. Gorsegner")
-df_ladybug$collector <- str_replace(df_ladybug$collector, "m. gorsegner", "M. Gorsegner")
-df_ladybug$collector <- str_replace(df_ladybug$collector, "M.Gorsegner", "M. Gorsegner")
-df_ladybug$collector <- str_replace(df_ladybug$collector, "Marissa Gorsegner", "M. Gorsegner")
-df_ladybug$collector <- str_replace(df_ladybug$collector, "M. gorsegner", "M. Gorsegner")
-df_ladybug$collector <- str_replace(df_ladybug$collector, "v. cervantes", "V. cervantes")
-df_ladybug$collector <- str_replace(df_ladybug$collector, "Veronica Cervatnes", "V. cervantes")
-df_ladybug$collector <- str_replace(df_ladybug$collector, "Veronica Cervantes", "V. cervantes")
-df_ladybug$collector <- str_replace(df_ladybug$collector, "V. Cervantes", "V. cervantes")
-df_ladybug$collector <- str_replace(df_ladybug$collector, "V. cervantes", "V. cervantes")
-df_ladybug$collector <- str_replace(df_ladybug$collector, "V.Cervantes", "V. cervantes")
-df_ladybug$collector <- str_replace(df_ladybug$collector, "v cervantes", "V. cervantes")
 
-df_ladybug$Species <- str_replace(df_ladybug$Species, "Propylea quatuordecimpuncata", "Propylea quatuordecimpunctata")
-df_ladybug$Species <- str_replace(df_ladybug$Species, "Harmonia axyrisis", "Harmonia axyridis")
-df_ladybug$Species <- str_replace(df_ladybug$Species, "harmonia axyridis", "Harmonia axyridis")
-df_ladybug$Species <- str_replace(df_ladybug$Species, "harmonia axyrids", "Harmonia axyridis")
 df_ladybug$Species <- str_replace(df_ladybug$Species, "Harminia axyridis", "Harmonia axyridis")
 df_ladybug$Species <- str_replace(df_ladybug$Species, "Colemegilla maculata", "Coleomegilla maculata")
 df_ladybug$Species <- str_replace(df_ladybug$Species, "coleomegilla maculata", "Coleomegilla maculata")
 df_ladybug$Species <- str_replace(df_ladybug$Species, "Cycloneda munda", "Cycloneda Munda")
 df_ladybug$Species <- str_replace(df_ladybug$Species, "cycloneda munda", "Cycloneda Munda")
 df_ladybug$Species <- str_replace(df_ladybug$Species, "coccinella septempunctata", "Coccinella Septempunctata")
+df_ladybug$Species <- str_replace(df_ladybug$Species, "Propylea quatuordecimpuncata", "Propylea quatuordecimpunctata")
+df_ladybug$Species <- str_replace(df_ladybug$Species, "Harmonia axyrisis", "Harmonia axyridis")
+df_ladybug$Species <- str_replace(df_ladybug$Species, "harmonia axyridis", "Harmonia axyridis")
+df_ladybug$Species <- str_replace(df_ladybug$Species, "harmonia axyrids", "Harmonia axyridis")
 df_ladybug$Species <- str_replace(df_ladybug$Species, "Coccinella septempunctata", "Coccinella Septempunctata")
 df_ladybug$Species <- str_replace(df_ladybug$Species, "hippodamia parenthesis", "Hippodamia parenthesis")
 df_ladybug$Species <- str_replace(df_ladybug$Species, "Hippodamia covergence", "Hippodamia convergens")
@@ -73,4 +73,15 @@ df_species_count <- df_ladybug %>%
   select(Species) %>%
   count(Species) %>%
   rename(Amount = n)
+
+#Plot count for each species
+ggplot(data = df_species_count, aes(x = Species, y= Amount, fill=Species)) +
+  geom_bar(stat="identity")+
+  xlab("Species")+
+  ylab("Count")+
+  ggtitle("Count by Species")+
+  theme(axis.text.x = element_text(angle = 90))+
+  theme(legend.position="none")
+
+
 
