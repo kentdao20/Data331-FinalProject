@@ -58,9 +58,9 @@ df_ladybug$Species <- str_replace(df_ladybug$Species, "Coccinella semtempuncata"
 df_collector_amount <- df_ladybug %>%
   select(collector) %>%
   count(collector) %>%
-  drop_na() %>%
   rename(Amount = n)%>%
-  rename(Collector = collector)
+  rename(Collector = collector)%>%
+  drop_na() 
 
 #collector plot for each
 ggplot(data = df_collector_amount, aes(x = Amount, y= Collector, fill= Collector)) +
@@ -83,5 +83,42 @@ ggplot(data = df_species_count, aes(x = Species, y= Amount, fill=Species)) +
   theme(axis.text.x = element_text(angle = 90))+
   theme(legend.position="none")
 
+#collector for each species
+df_collector_species <- df_ladybug %>%
+  dplyr:: select(collector, Species) %>%
+  group_by(collector)%>%
+  drop_na()
+
+#graph for collector each species
+ggplot(data = df_collector_species, aes(x = collector, y= Species, fill= Species)) +
+  geom_bar(position = "stack", stat="identity") +
+  xlab("Collector") +
+  ggtitle("Collector and Species relati") +
+  theme(axis.text.x = element_text(angle = 90)) 
+
+
+Date = df_ladybug$date
+ggplot(df_ladybug, aes(Date)) +
+  geom_bar(color = "purple", fill = "white")
+
+date_table = table(Date)
+View(date_table)
+
+#Min, Median, Max amount caught within a day
+least = names(date_table[date_table==min(date_table)]) #day with least caught
+most = names(date_table[date_table==max(date_table)]) #day with most caught
+middle = names(date_table[date_table==median(date_table)]) #day with middle amount caught
+
+
+least
+View(data.frame(least, middle, most))
+
+
+#First day, middle day, and last day that a bug was caught
+first_date = min(Date)
+last_date = max(Date)
+median_date = median(Date)
+
+View(data.frame(first_date, median_date, last_date))
 
 
