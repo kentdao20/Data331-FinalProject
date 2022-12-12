@@ -72,11 +72,11 @@ The purpose of this visual is to analyze the location of the apex differs among 
 
 The purpose of this visual is to compare the Anterior spot area in male and female cabbage butterfly. The male's anterior spot is for both wings is significantly greater than the female's. However, we want to generate a t-test to see if the sex affects the Anterior spot average. 
 
-### 4. T-test
+### 3. T-test
 
 We performed a paired t-test for the anterior spot average and sex. the confidence interval includes 0, thereofre, we can say that there is no significant difference between the means of the two populations, at a given level of confidence. 
 
-### Mean, Median, Max, Min
+### 4.Mean, Median, Max, Min
 
 In this section, you will see a variety of visualizations that show the descriptive statistics of the Cabbage Butterfly data. We preformed calculations and visualized this data by splitting the data into two groups, the left and right data. 
 
