@@ -54,14 +54,18 @@ As the test for this dataset is only the amount of species total,
 butterfly
 
 **2. Visualization**
+
 *VISUAL #1
+
 We utilized a line graph to monitor changes in average wing width over time. We can compare the right and left wings on the same plane, and it's fascinating to see how this particular anatomical trait of the cabbage butterfly evolved from 1865 to 2015. It also makes us wonder what is causing the data's fluctuation. This information might potentially be used to forecast the butterfly's wing width in the future.
 
 
 *VISUAL #2
+
 This visualization demonstrates how the cabbage butterfly's wing length differs depending on the country. It illustrates how the average lengths of the right and left wings have changed over time in each of the four countries where data was gathered. It also demonstrates the fact that certain countries only have data from particular years. We easily compare the countries in a single picture by utilizing the facet wrap function.
 
 *VISUAL #3
+
 The purpose of this visual is to analyze the location of the apex differs among male and female cabbage butterflies. It is seen here that the male apex is much larger than that of a female. When you look at both wings you will find similar distribution. This makes sense given that butterfly wings are symmetrical.
 
 
