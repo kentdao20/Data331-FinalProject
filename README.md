@@ -72,3 +72,5 @@ The purpose of this visual is to analyze the location of the apex differs among 
 
 
 ### 4. T-test
+
+We performed a paired t-test for the left and right data. the confidence interval includes 0, thereofre, we can say that there is no significant difference between the means of the two populations, at a given level of confidence.
