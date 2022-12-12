@@ -68,9 +68,27 @@ This visualization demonstrates how the cabbage butterfly's wing length differs 
 
 The purpose of this visual is to analyze the location of the apex differs among male and female cabbage butterflies. It is seen here that the male apex is much larger than that of a female. When you look at both wings you will find similar distribution. This makes sense given that butterfly wings are symmetrical.
 
+*VISUAL #4
 
-
+The purpose of this visual is to compare the Anterior spot area in male and female cabbage butterfly. The male's anterior spot is for both wings is significantly greater than the female's. However, we want to generate a t-test to see if the sex affects the Anterior spot average. 
 
 ### 4. T-test
 
-We performed a paired t-test for the left and right data. the confidence interval includes 0, thereofre, we can say that there is no significant difference between the means of the two populations, at a given level of confidence.
+We performed a paired t-test for the anterior spot average and sex. the confidence interval includes 0, thereofre, we can say that there is no significant difference between the means of the two populations, at a given level of confidence. 
+
+### Mean, Median, Max, Min
+
+In this section, you will see a variety of visualizations that show the descriptive statistics of the Cabbage Butterfly data. We preformed calculations and visualized this data by splitting the data into two groups, the left and right data. 
+
+*VISUAL 1
+
+The first visualization you will see is a stacked line graph showing the median apex, length, and width of the left and right data over time. You can see that both the left and right wing data are very similar when it comes to the peaks and valleys represented on the graph. 
+
+
+*VISUAL 2
+
+The next graph is a scatter plot showing the correlation between the right and left data. This correlation is positive and very strong because as you can tell from, the visualization it is very linear. This makes a lot of sense because the two variables being looked at are the left and right side of the cabbage butterfly and a butterfly is symmetrical.
+
+*VISUAL 3
+
+Lastly, the boxplot visual shows the descriptive statistics for the data in a different manner. Here we can draw a similar conclusion regarding the symmetry of butterfly.
