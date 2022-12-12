@@ -1,6 +1,6 @@
-### DATA 332 Final Project
+# DATA 332 Final Project
 
-### Authors: Kent Dao, Sally Boutaleb
+# Authors: Kent Dao, Sally Boutaleb
 
 ## Overview:
 
