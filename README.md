@@ -1,14 +1,14 @@
-#### DATA 332 Final Project**
+### DATA 332 Final Project
 
-#### Authors: Kent Dao, Sally Boutaleb
+### Authors: Kent Dao, Sally Boutaleb
 
-### Overview:
+## Overview:
 
 The data was taken from the biology deapartment of Augustana College. We want to clean and analyze the information base on the technical skill in class and understanding to draw conclusion from the Cabbage Butterfly and Ladybug. The data on Lady Bug was collected by Augustana Biology deapartment for keeping track of the number. This include what species the LadyBug belong to, what are the families, who is the collecor, the coordinate, and the date. The Cabbage Butterfly data was collected from 1865 to 2015. We took both sets of data and make visualization to easier understand and with different test to see if the data correlate with each other using R.
 
-#### LadyBug Data
+### LadyBug Data
 
-### Process:
+## Process:
 
 **1. Cleaning data**
 
@@ -49,11 +49,11 @@ As the test for this dataset is only the amount of species total,
 
 #### Cabbage Butterfly Data
 
-### Cleaning data
+**1. Cleaning data**
 
 butterfly
 
-### Visualization
+**2. Visualization**
 *VISUAL #1
 We utilized a line graph to monitor changes in average wing width over time. We can compare the right and left wings on the same plane, and it's fascinating to see how this particular anatomical trait of the cabbage butterfly evolved from 1865 to 2015. It also makes us wonder what is causing the data's fluctuation. This information might potentially be used to forecast the butterfly's wing width in the future.
 
