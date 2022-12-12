@@ -49,12 +49,13 @@ As the test for this dataset is only the amount of species total,
 
 ## Cabbage Butterfly Data
 
-**1. Cleaning data**
+### Cleaning data
 
 butterfly
 
-**2. Visualization**
-We used a line graph so we could track changes in the average wing width over the years. We can compare the right wing and left wing on the same plane, and it's intriguing to observe the evolution of this particular anatomical feature of the cabbage butterfly from 1865 to 2015. It also prompts us to question what causes the data's variation. We may also used this data to predict the butterfly's wing width in the future. 
+### Visualization
+
+We utilized a line graph to monitor changes in average wing width over time. We can compare the right and left wings on the same plane, and it's fascinating to see how this particular anatomical trait of the cabbage butterfly evolved from 1865 to 2015. It also makes us wonder what is causing the data's fluctuation. This information might potentially be used to forecast the butterfly's wing width in the future.
 
 
-**3. Test**
+### T-Test
