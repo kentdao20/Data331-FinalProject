@@ -47,13 +47,13 @@ In this visualization, we see
 As the test for this dataset is only the amount of species total, 
 
 
-#### Cabbage Butterfly Data
+### Cabbage Butterfly Data
 
-### 1. Cleaning data**
+### 1. Cleaning data
 
 butterfly
 
-### 2. Visualization**
+### 2. Visualization
 
 *VISUAL #1
 
