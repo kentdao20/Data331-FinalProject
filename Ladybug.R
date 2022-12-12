@@ -9,6 +9,8 @@ setwd("D:/DATA 331/Final Project")
 df_scan_ladybug <- read.csv("Scan Ladybug Data.csv")
 df_ladybug <- read_excel("Ladybug Data.xlsx", sheet = 1) 
 
+
+
 #cleaned data
 df_ladybug$collector <- str_replace(df_ladybug$collector, "m gorsegner", "M. Gorsegner")
 df_ladybug$collector <- str_replace(df_ladybug$collector, "m. gorsegner", "M. Gorsegner")
@@ -121,5 +123,16 @@ last_date = max(Date)
 median_date = median(Date)
 
 View(data.frame(first_date, median_date, last_date))
+
+
+chisq.test(Species, Collector,  correct=FALSE, simulate.p.value=TRUE)
+chisq.test(Species, Corrdinates,  correct=FALSE, simulate.p.value=TRUE)
+
+
+chisq.test(Collector, Date,   correct=FALSE, simulate.p.value=TRUE)
+chisq.test(Species, Date,   correct=FALSE, simulate.p.value=TRUE)
+chisq.test(Species, Corrdinates,   correct=FALSE, simulate.p.value=TRUE)
+chisq.test(Corrdinates, Species,   correct=FALSE, simulate.p.value=TRUE)
+
 
 
