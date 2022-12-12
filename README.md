@@ -49,11 +49,11 @@ As the test for this dataset is only the amount of species total,
 
 #### Cabbage Butterfly Data
 
-**1. Cleaning data**
+### 1. Cleaning data**
 
 butterfly
 
-**2. Visualization**
+### 2. Visualization**
 
 *VISUAL #1
 
@@ -71,4 +71,4 @@ The purpose of this visual is to analyze the location of the apex differs among 
 
 
 
-## T-test
+### 4. T-test
