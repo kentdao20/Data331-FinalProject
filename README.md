@@ -89,7 +89,7 @@ We performed a paired t-test for the anterior spot average and sex. the confiden
 
 In this section, you will see a variety of visualizations that show the descriptive statistics of the Cabbage Butterfly data. We preformed calculations and visualized this data by splitting the data into two groups, the left and right data. 
 
-VISUAL 1
+*VISUAL 1
 
 The first visualization you will see is a stacked line graph showing the median apex, length, and width of the left and right data by decade. You can see that both the left and right wing data are very similar when it comes to the peaks and valleys represented on the graph. 
 
