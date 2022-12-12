@@ -66,7 +66,7 @@ df_collector_amount <- df_ladybug %>%
 ggplot(data = df_collector_amount, aes(x = Amount, y= Collector, fill= Collector)) +
   geom_bar(stat="Identity")+
   xlab("Count") +
-  ggtitle("Count by Collector")
+  ggtitle("                                        Count by Collector")
 
 #species count
 df_species_count <- df_ladybug %>%
@@ -79,7 +79,7 @@ ggplot(data = df_species_count, aes(x = Species, y= Amount, fill=Species)) +
   geom_bar(stat="identity")+
   xlab("Species")+
   ylab("Count")+
-  ggtitle("Count by Species")+
+  ggtitle("                                                             Count by Species")+
   theme(axis.text.x = element_text(angle = 90))+
   theme(legend.position="none")
 
@@ -93,13 +93,14 @@ df_collector_species <- df_ladybug %>%
 ggplot(data = df_collector_species, aes(x = collector, y= Species, fill= Species)) +
   geom_bar(position = "stack", stat="identity") +
   xlab("Collector") +
-  ggtitle("Collector and Species relati") +
+  ggtitle("         Collector and Species relationship") +
   theme(axis.text.x = element_text(angle = 90)) 
 
 
 Date = df_ladybug$date
 ggplot(df_ladybug, aes(Date)) +
   geom_bar(color = "purple", fill = "white")
+
 
 date_table = table(Date)
 View(date_table)
