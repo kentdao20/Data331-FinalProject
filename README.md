@@ -10,23 +10,37 @@ The data was taken from the biology deapartment of Augustana College. We want to
 
 ### Process:
 
-1. Cleaning data
+**1. Cleaning data**
 
-  The data was cleaned 
-
-
-2. Visualization
+The data was cleaned 
 
 
+**2. Visualization**
+### Count by collector
+![Collector count](https://user-images.githubusercontent.com/118495124/206943340-50a4ec36-3085-40f6-b752-ae7d559778b8.png)
 
-3. Test
 
+![Collector and Species rela](https://user-images.githubusercontent.com/118495124/206943480-5de6b673-d99c-49e7-84a8-9535d113139b.png)
+
+
+![Species Count](https://user-images.githubusercontent.com/118495124/206943484-4aa4307d-4476-45bd-bbe8-f503846caeca.png)
+
+
+![Date collect](https://user-images.githubusercontent.com/118495124/206943486-7b7b4f08-26fa-4f6e-b395-ab70ac5b03b7.png)
+
+
+
+**3. Test**
 
 
 
 
 ## Cabbage Butterfly Data
 
-1. Cleaning data
-2. Visualization
-3. Test
+**1. Cleaning data**
+
+
+**2. Visualization**
+
+
+**3. Test**
