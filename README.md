@@ -82,7 +82,7 @@ In this section, you will see a variety of visualizations that show the descript
 
 *VISUAL 1
 
-The first visualization you will see is a stacked line graph showing the median apex, length, and width of the left and right data over time. You can see that both the left and right wing data are very similar when it comes to the peaks and valleys represented on the graph. 
+The first visualization you will see is a stacked line graph showing the median apex, length, and width of the left and right data by decade. You can see that both the left and right wing data are very similar when it comes to the peaks and valleys represented on the graph. 
 
 
 *VISUAL 2
