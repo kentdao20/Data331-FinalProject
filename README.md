@@ -1,4 +1,4 @@
-# DATA 331 Final Project
+# DATA 332 Final Project
 
 # Authors: Kent Dao, Sally Boutaleb
 
@@ -50,7 +50,7 @@ As the test for this dataset is only the amount of species total, we decided to 
 
 ### 1. Cleaning data
 
-butterfly
+After importing the data from excel uing the "readxl" function, we cleaned the data by selecting the columns needed for the analysis. Using the dplyr package, We used the "select", "mutate", "rename" to clean our datasets. We also used the "leftjoin" function to join our two datasets to generate visualization for our analysis.
 
 ### 2. Visualization
 
@@ -82,25 +82,25 @@ The purpose of this visual is to compare the Anterior spot area in male and fema
 
 ### 3. T-test
 
-We performed a paired t-test for the anterior spot average and sex. the confidence interval includes 0, thereofre, we can say that there is no significant difference between the means of the two populations, at a given level of confidence. 
+We performed a t-test to test if the anterior spot area is affected by the sex of the cabbage butterfly. The confidence interval includes 0, thereofre, we can say that there is no significant difference between the means of the two populations, at a given level of confidence. Therefore, the most logical explanation is that the difference is not enough significant because of the sample size. 
 
 ### 4.Mean, Median, Max, Min
 
 In this section, you will see a variety of visualizations that show the descriptive statistics of the Cabbage Butterfly data. We preformed calculations and visualized this data by splitting the data into two groups, the left and right data. 
 
-VISUAL 1
+*VISUAL 1
 
 The first visualization you will see is a stacked line graph showing the median apex, length, and width of the left and right data by decade. You can see that both the left and right wing data are very similar when it comes to the peaks and valleys represented on the graph. 
 
 ![Median_by_decade](https://user-images.githubusercontent.com/118495124/207156039-ced38300-ea11-4433-9d56-9c134299c728.png)
 
-VISUAL 2
+*VISUAL 2
 
 The next graph is a scatter plot showing the correlation between the right and left data. This correlation is positive and very strong because as you can tell from, the visualization it is very linear. This makes a lot of sense because the two variables being looked at are the left and right side of the cabbage butterfly and a butterfly is symmetrical.
 
 ![graph 7](https://user-images.githubusercontent.com/118495124/207156339-4f503c05-3a86-46f6-b136-b3d4cb692fc5.png)
 
-VISUAL 3
+*VISUAL 3
 
 Lastly, the boxplot visual shows the descriptive statistics for the data in a different manner. Here we can draw a similar conclusion regarding the symmetry of butterfly.
 
