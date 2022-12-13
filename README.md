@@ -41,7 +41,7 @@ In this visualization, we see that which data the sample was collected, which in
 ![Date collect](https://user-images.githubusercontent.com/118495124/206943486-7b7b4f08-26fa-4f6e-b395-ab70ac5b03b7.png)
 
 
-**3. Test**
+**3. Chi square Test**
 
 As the test for this dataset is only the amount of species total, we decided to have the visualization on the date collect to see the minimum amount of sample collectedd was on June 17th, 2021 while the most collected was on August 3th, 2021. The median of this data is on August 4th, 2021 and we put all the data in a dataframe in R. The t-test was not working so I decided to do a Chi-square test instead to find if the correlation in the data is not 0. We looked at Coordinate vs Species and Collector vs Species. The p-value is 0.0004988, which is smaller than our alpha (0.05), as this is a 2 tail test. WE have evidence that there is correlation betweeen Coordinate and Species.
 
